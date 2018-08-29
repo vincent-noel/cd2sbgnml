@@ -5,8 +5,9 @@
 The aim is to provide the most accurate translation possible between
 [CellDesigner](http://www.celldesigner.org/)
 and [SBGN-ML](https://sbgn.github.io/sbgn/) file formats.
-Translation in both direction is possible. This project should ultimately be integrated into
-[SBFC](https://www.ebi.ac.uk/biomodels/tools/converters/).
+Translation in both direction is possible. 
+A webservice using this library can be found [here](https://github.com/sbgn/cd2sbgnml-webservice).
+This project should ultimately be integrated into [SBFC](https://www.ebi.ac.uk/biomodels/tools/converters/).
 
 Compatible formats:
  - Sbml Level 2 Version 4, CellDesigner modelVersion 4.0 (output of CellDesigner 4.4)
