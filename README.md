@@ -68,8 +68,8 @@ Pull requests and all forms of contribution will be warmly welcomed.
 
  - More details about the [SBGN-ML format](https://github.com/sbgn/sbgn/wiki/SBGN_ML)
  - The [CellDesigner format](http://www.celldesigner.org/documents/CellDesigner4ExtensionTagSpecificationE.pdf) (outdated for 4.4)
- - [SBFC doc](http://sbfc.sourceforge.net/mediawiki/index.php/Main_Page)
- - a super useful webservice for [SBGN rendering](http://sysbioapps.dyndns.org/Home/Services)
+ - [SBFC documentation](http://sbfc.sourceforge.net/mediawiki/index.php/Main_Page)
+ - A super useful webservice for [SBGN rendering](http://sysbioapps.dyndns.org/Home/Services)
 
 ## Acknowledgements
 
