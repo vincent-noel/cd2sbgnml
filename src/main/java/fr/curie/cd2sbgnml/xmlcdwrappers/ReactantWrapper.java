@@ -101,8 +101,8 @@ public class ReactantWrapper {
 
         // get reactanct's link anchor point
         this.anchorPoint = AnchorPoint.CENTER; // default to center
-        if(reactantLink.getLinkAnchor() != null) {
-            this.anchorPoint = AnchorPoint.valueOf(reactantLink.getLinkAnchor().getPosition());
+        if((reactantLink.getLinkAnchor() != null) && (!reactantLink.getLinkAnchor().getPosition().equals("INACTIVE"))) {
+        	this.anchorPoint = AnchorPoint.valueOf(reactantLink.getLinkAnchor().getPosition());
         }
 
         this.lineWrapper = new LineWrapper(reactantLink.getConnectScheme(),
@@ -119,7 +119,7 @@ public class ReactantWrapper {
 
         // get reactanct's link anchor point
         this.anchorPoint = AnchorPoint.CENTER; // default to center
-        if(productLink.getLinkAnchor() != null) {
+        if((productLink.getLinkAnchor() != null) && (!productLink.getLinkAnchor().getPosition().equals("INACTIVE"))) {
             this.anchorPoint = AnchorPoint.valueOf(productLink.getLinkAnchor().getPosition());
         }
 
@@ -184,7 +184,7 @@ public class ReactantWrapper {
                 i++;
             }
         }
-
+       
         if(reaction.getAnnotation().getExtension().getListOfProductLinks() != null) {
             int i=0;
             for(ProductLink plink: reaction.getAnnotation().getExtension().getListOfProductLinks().getProductLink()) {
@@ -192,7 +192,7 @@ public class ReactantWrapper {
                 i++;
             }
         }
-
+       
         if(reaction.getAnnotation().getExtension().getListOfModification() != null) {
             SimpleEntry<List<ReactantWrapper>, List<LogicGateWrapper>> result =
                     ReactantWrapper.fromListOfModifications(reaction.getAnnotation().getExtension().getListOfModification(), modelW);
