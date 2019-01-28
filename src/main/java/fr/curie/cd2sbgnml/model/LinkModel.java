@@ -41,6 +41,7 @@ public class LinkModel {
     }
 
     public static String getSbgnClass(String reactionType) {
+
         switch(reactionType) {
             case "STATE_TRANSITION": return "production";
             case "KNOWN_TRANSITION_OMITTED": return "production";
@@ -70,7 +71,9 @@ public class LinkModel {
             case "BOOLEAN_LOGIC_GATE_OR": return "";
             case "BOOLEAN_LOGIC_GATE_NOT": return "";
             case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "";*/
-
+            
+            case "BOOLEAN_LOGIC_GATE" : return "production";
+            
             // some direct connection types
             case "NEGATIVE_INFLUENCE": return "inhibition";
             case "POSITIVE_INFLUENCE": return "stimulation";
