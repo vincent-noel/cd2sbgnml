@@ -72,7 +72,7 @@ public class LinkModel {
             case "BOOLEAN_LOGIC_GATE_NOT": return "";
             case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "";*/
             
-            case "BOOLEAN_LOGIC_GATE" : return "production";
+            case "BOOLEAN_LOGIC_GATE" : return "logic arc";
             
             // some direct connection types
             case "NEGATIVE_INFLUENCE": return "inhibition";
