@@ -67,10 +67,10 @@ public class LinkModel {
             case "MODULATION": return "modulation";
             case "TRIGGER": return "necessary stimulation";
 
-            /*case "BOOLEAN_LOGIC_GATE_AND": return "";
-            case "BOOLEAN_LOGIC_GATE_OR": return "";
-            case "BOOLEAN_LOGIC_GATE_NOT": return "";
-            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "";*/
+            case "BOOLEAN_LOGIC_GATE_AND": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_OR": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_NOT": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "logic arc";
             
             case "BOOLEAN_LOGIC_GATE" : return "logic arc";
             
