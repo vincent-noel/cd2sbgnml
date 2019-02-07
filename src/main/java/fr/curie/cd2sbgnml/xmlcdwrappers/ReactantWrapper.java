@@ -101,8 +101,8 @@ public class ReactantWrapper {
 
         // get reactanct's link anchor point
         this.anchorPoint = AnchorPoint.CENTER; // default to center
-        if((reactantLink.getLinkAnchor() != null) && (!reactantLink.getLinkAnchor().getPosition().equals("INACTIVE"))) {
-        	this.anchorPoint = AnchorPoint.valueOf(reactantLink.getLinkAnchor().getPosition());
+        if(reactantLink.getLinkAnchor() != null) {
+            this.anchorPoint = AnchorPoint.valueOf(reactantLink.getLinkAnchor().getPosition());
         }
 
         this.lineWrapper = new LineWrapper(reactantLink.getConnectScheme(),
@@ -119,7 +119,7 @@ public class ReactantWrapper {
 
         // get reactanct's link anchor point
         this.anchorPoint = AnchorPoint.CENTER; // default to center
-        if((productLink.getLinkAnchor() != null) && (!productLink.getLinkAnchor().getPosition().equals("INACTIVE"))) {
+        if(productLink.getLinkAnchor() != null) {
             this.anchorPoint = AnchorPoint.valueOf(productLink.getLinkAnchor().getPosition());
         }
 
@@ -184,7 +184,7 @@ public class ReactantWrapper {
                 i++;
             }
         }
-       
+
         if(reaction.getAnnotation().getExtension().getListOfProductLinks() != null) {
             int i=0;
             for(ProductLink plink: reaction.getAnnotation().getExtension().getListOfProductLinks().getProductLink()) {
@@ -192,7 +192,7 @@ public class ReactantWrapper {
                 i++;
             }
         }
-       
+
         if(reaction.getAnnotation().getExtension().getListOfModification() != null) {
             SimpleEntry<List<ReactantWrapper>, List<LogicGateWrapper>> result =
                     ReactantWrapper.fromListOfModifications(reaction.getAnnotation().getExtension().getListOfModification(), modelW);
@@ -227,7 +227,7 @@ public class ReactantWrapper {
             // we assume that the logic gate will always be defined before it's linked reactants
             // targetLineIndex may not be present, when additional glyphs are added to an already existing logic gate
             // TODO make this clean using the ids defined in the logic gate
-            else if(logicGateRef != null && ( modif.getTargetLineIndex() != null ||
+            else if(logicGateRef != null && ( modif.getTargetLineIndex() == null ||
                     modif.getTargetLineIndex().endsWith("0"))){ // glyph connected to logic gate case
                 reactantList.add(new ReactantWrapper(modif, modelW.getAliasWrapperFor(modif.getAliases()), i, logicGateRef));
             }

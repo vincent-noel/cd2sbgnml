@@ -41,7 +41,6 @@ public class LinkModel {
     }
 
     public static String getSbgnClass(String reactionType) {
-
         switch(reactionType) {
             case "STATE_TRANSITION": return "production";
             case "KNOWN_TRANSITION_OMITTED": return "production";
@@ -67,13 +66,11 @@ public class LinkModel {
             case "MODULATION": return "modulation";
             case "TRIGGER": return "necessary stimulation";
 
-            case "BOOLEAN_LOGIC_GATE_AND": return "logic arc";
-            case "BOOLEAN_LOGIC_GATE_OR": return "logic arc";
-            case "BOOLEAN_LOGIC_GATE_NOT": return "logic arc";
-            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "logic arc";
-            
-            case "BOOLEAN_LOGIC_GATE" : return "logic arc";
-            
+            /*case "BOOLEAN_LOGIC_GATE_AND": return "";
+            case "BOOLEAN_LOGIC_GATE_OR": return "";
+            case "BOOLEAN_LOGIC_GATE_NOT": return "";
+            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "";*/
+
             // some direct connection types
             case "NEGATIVE_INFLUENCE": return "inhibition";
             case "POSITIVE_INFLUENCE": return "stimulation";
@@ -122,8 +119,6 @@ public class LinkModel {
                 return "REDUCED_TRIGGER";
             case EQUIVALENCE_ARC:
                 return "POSITIVE_INFLUENCE";
-            case LOGIC_ARC:
-                return "BOOLEAN_LOGIC_GATE";
         }
         throw new IllegalArgumentException("Could not infer CellDesigner class from SBGN arc class: "+sbgnClass);
     }
