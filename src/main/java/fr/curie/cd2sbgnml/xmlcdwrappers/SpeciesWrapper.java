@@ -135,12 +135,11 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
     private void commonConstructor(SpeciesIdentity identity, ModelWrapper modelW) {
         this.multimer = 1; // default to 1 if nothing else found
         this.residues = new ArrayList<>();
-        this.aliases = new ArrayList<>();       
+        this.aliases = new ArrayList<>();
         this.isComplex = this.cdClass.equals("COMPLEX");
 
+
         if(this.isComplex) {
-        	if(modelW.getComplexSpeciesAliasFor(this.id) != null)
-        	{
             logger.debug("Species has "+modelW.getComplexSpeciesAliasFor(this.id).size()+" complexSpeciesAliases");
             for(ComplexSpeciesAlias complexAlias : modelW.getComplexSpeciesAliasFor(this.id)) {
                 if (complexAlias == null) {
@@ -149,11 +148,6 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
                 logger.debug("Parse complex alias: " + complexAlias.getId());
                 this.aliases.add(new AliasWrapper(complexAlias, this));
             }
-        }
-        	else
-        	{
-        		 logger.warn("Complex species: "+this.id+" should have complex aliases");
-        	}
         }
         //else {
         /*
@@ -297,7 +291,6 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
         logger.debug("final residue size for species "+this.getId()+" : "+this.residues.size());
 
     }
-
     /**
      * Getting a list of region is impossible because of broken Binom api, so we use raw NodeList
      * @deprecated
