@@ -35,8 +35,8 @@ public class Cd2SbgnmlScript {
 
     public static void convert(String inputFileName, String outputFileName) {
         CD2SBGNML toSBGNConverter = new CD2SBGNML();
-
-
+        long start = System.currentTimeMillis();
+        
         CellDesignerSBFCModel cdModel = new CellDesignerSBFCModel();
         try {
             cdModel.setModelFromFile(inputFileName);
@@ -50,6 +50,10 @@ public class Cd2SbgnmlScript {
         } catch (ConversionException | ReadModelException | WriteModelException e) {
             e.printStackTrace();
         }
+        
+     // Get elapsed time in milliseconds
+        long elapsedTimeMillis = System.currentTimeMillis() - start;
+        System.out.println(elapsedTimeMillis/1000F +" seconds");
 
         // VALIDATION
         try {

@@ -140,6 +140,9 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
 
 
         if(this.isComplex) {
+        	
+        	if(modelW.getComplexSpeciesAliasFor(this.id) != null)
+        	{
             logger.debug("Species has "+modelW.getComplexSpeciesAliasFor(this.id).size()+" complexSpeciesAliases");
             for(ComplexSpeciesAlias complexAlias : modelW.getComplexSpeciesAliasFor(this.id)) {
                 if (complexAlias == null) {
@@ -148,6 +151,11 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
                 logger.debug("Parse complex alias: " + complexAlias.getId());
                 this.aliases.add(new AliasWrapper(complexAlias, this));
             }
+        }
+        	else
+        	{
+        		 logger.warn("Complex species: "+this.id+" should have complex aliases");
+        	}
         }
         //else {
         /*

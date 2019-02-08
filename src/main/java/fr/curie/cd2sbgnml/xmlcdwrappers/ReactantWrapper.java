@@ -101,7 +101,8 @@ public class ReactantWrapper {
 
         // get reactanct's link anchor point
         this.anchorPoint = AnchorPoint.CENTER; // default to center
-        if(reactantLink.getLinkAnchor() != null) {
+        if((reactantLink.getLinkAnchor() != null) && (!reactantLink.getLinkAnchor().getPosition().equals("INACTIVE")))
+        {
             this.anchorPoint = AnchorPoint.valueOf(reactantLink.getLinkAnchor().getPosition());
         }
 

@@ -66,10 +66,11 @@ public class LinkModel {
             case "MODULATION": return "modulation";
             case "TRIGGER": return "necessary stimulation";
 
-            /*case "BOOLEAN_LOGIC_GATE_AND": return "";
-            case "BOOLEAN_LOGIC_GATE_OR": return "";
-            case "BOOLEAN_LOGIC_GATE_NOT": return "";
-            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "";*/
+            case "BOOLEAN_LOGIC_GATE_AND": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_OR": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_NOT": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE_UNKNOWN": return "logic arc";
+            case "BOOLEAN_LOGIC_GATE": return "logic arc";
 
             // some direct connection types
             case "NEGATIVE_INFLUENCE": return "inhibition";
@@ -119,6 +120,8 @@ public class LinkModel {
                 return "REDUCED_TRIGGER";
             case EQUIVALENCE_ARC:
                 return "POSITIVE_INFLUENCE";
+            case LOGIC_ARC:
+                return "BOOLEAN_LOGIC_GATE";
         }
         throw new IllegalArgumentException("Could not infer CellDesigner class from SBGN arc class: "+sbgnClass);
     }

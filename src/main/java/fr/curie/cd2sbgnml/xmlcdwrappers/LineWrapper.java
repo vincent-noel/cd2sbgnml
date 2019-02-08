@@ -74,7 +74,6 @@ public class LineWrapper {
         /*
             In ACSN, connectScheme can be missing. Use default values for this case.
          */
-        if(connectScheme == null) {
             // connect policy and rectangle index already have default value
             this.lineDirectionList = new ArrayList<>();
             // there needs to be one default lineDirection
@@ -82,13 +81,15 @@ public class LineWrapper {
             defaultLine.setIndex((short) 0);
             defaultLine.setValue("unknown");
             this.lineDirectionList.add(defaultLine);
-        }
-        else {
+        if(connectScheme != null)  
+        	{
             this.connectPolicy = connectScheme.getConnectPolicy();
             this.rectangleIndex = connectScheme.getRectangleIndex();
+            if(null != connectScheme.getListOfLineDirection())
+            {
             this.lineDirectionList = connectScheme.getListOfLineDirection().getLineDirection();
-        }
-
+            }
+        	}
     }
 
     private void setEditPoints(EditPoints editPoints){
