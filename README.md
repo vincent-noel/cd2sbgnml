@@ -5,8 +5,9 @@
 The aim is to provide the most accurate translation possible between
 [CellDesigner](http://www.celldesigner.org/)
 and [SBGN-ML](https://sbgn.github.io/sbgn/) file formats.
-Translation in both direction is possible. This project should ultimately be integrated into
-[SBFC](https://www.ebi.ac.uk/biomodels/tools/converters/).
+Translation in both direction is possible. 
+A webservice using this library can be found [here](https://github.com/sbgn/cd2sbgnml-webservice).
+This project should ultimately be integrated into [SBFC](https://www.ebi.ac.uk/biomodels/tools/converters/).
 
 Compatible formats:
  - Sbml Level 2 Version 4, CellDesigner modelVersion 4.0 (output of CellDesigner 4.4)
@@ -67,14 +68,12 @@ Pull requests and all forms of contribution will be warmly welcomed.
 
  - More details about the [SBGN-ML format](https://github.com/sbgn/sbgn/wiki/SBGN_ML)
  - The [CellDesigner format](http://www.celldesigner.org/documents/CellDesigner4ExtensionTagSpecificationE.pdf) (outdated for 4.4)
- - [SBFC doc](http://sbfc.sourceforge.net/mediawiki/index.php/Main_Page)
+ - [SBFC documentation](http://sbfc.sourceforge.net/mediawiki/index.php/Main_Page)
  - a super useful webservice for [SBGN rendering](http://sysbioapps.dyndns.org/Home/Services)
 
 ## Acknowledgements
 
-This work was initially done at [SysBio group](http://sysbio.curie.fr/) in [Institut Curie](https://curie.fr/)
-under the supervision of Andrei Zinovyev, in collaboration with Alexander Mazein from [EISBM](http://www.eisbm.org/)
-and the Disease Maps community.
+This work was initially done by Ludovic Roy at [SysBio group](http://sysbio.curie.fr/), [Institut Curie](https://curie.fr/), under the supervision of Andrei Zinovyev in collaboration with Alexander Mazein from [EISBM](http://www.eisbm.org/). The work was initiated in connection to the efforts of the [Disease Maps](http://disease-maps.org/) and [SBGN](http://sbgn.org/) communities.
 
 Thanks to Frank T. Bergmann for his SBGN rendering tool which made debugging a whole lot easier.
 
@@ -82,5 +81,4 @@ Thanks to Nicolas, Laetitia, Henri, Choumouss and Julien for the everyday office
 
 And thanks to Olga Ivanova for this translation rule sheet that, in the end, definitely had a real part in this project.
 
-This work has received funding from the European Union Horizon 2020 research and
-innovation programme under grant agreement No 668858.
+This work has received funding from the European Union Horizon 2020 research and innovation programme under grant agreement No 668858.
