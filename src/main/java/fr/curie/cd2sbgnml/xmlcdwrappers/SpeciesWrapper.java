@@ -291,6 +291,7 @@ public class SpeciesWrapper implements INotesFeature, IAnnotationsFeature {
         logger.debug("final residue size for species "+this.getId()+" : "+this.residues.size());
 
     }
+
     /**
      * Getting a list of region is impossible because of broken Binom api, so we use raw NodeList
      * @deprecated

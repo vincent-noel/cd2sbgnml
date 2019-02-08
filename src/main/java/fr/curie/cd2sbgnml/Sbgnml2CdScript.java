@@ -36,12 +36,11 @@ public class Sbgnml2CdScript {
                 .parse(args);
 
         convert(app.inputFileName, app.outputFileName);
-        
     }
 
     public static void convert(String inputFileName, String outputFileName) {
         SBGNML2CD toCDConverter = new SBGNML2CD();
-        long start = System.currentTimeMillis();
+
 
         SBGNSBFCModel sbgnModel = new SBGNSBFCModel();
         try {
@@ -72,9 +71,5 @@ public class Sbgnml2CdScript {
         } catch (SAXException | JAXBException e) {
             e.printStackTrace();
         }
-        
-        // Get elapsed time in milliseconds
-        long elapsedTimeMillis = System.currentTimeMillis() - start;
-        System.out.println(elapsedTimeMillis/1000F+" seconds");
     }
 }
