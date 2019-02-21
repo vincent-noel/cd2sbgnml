@@ -15,12 +15,12 @@ Compatible formats:
 
 To download the full app directly, go to the [release page](https://github.com/royludo/cd2sbgnml/releases).
 
-More information can be found in the [Wiki](https://github.com/royludo/cd2sbgnml/wiki).
+More information can be found in the [Wiki](https://github.com/sbgn/cd2sbgnml/wiki).
 
 Javadoc is available [here](https://royludo.github.io/cd2sbgnml).
 
-All known issues and limitations of the translator are listed in the [issues](https://github.com/royludo/cd2sbgnml/issues)
-and on this [wiki page](https://github.com/royludo/cd2sbgnml/wiki/Limitations).
+All known issues and limitations of the translator are listed in the [issues](https://github.com/sbgn/cd2sbgnml/issues)
+and on this [wiki page](https://github.com/sbgn/cd2sbgnml/wiki/Limitations).
 
 ## Requirements
 
@@ -59,9 +59,13 @@ directly calling the package with `java -jar`. Be sure to have JavaFX working in
 With the scripts, all log messages will go to System.out. With the GUI, everything will be written in
 the selected log file.
 
+## Translation of large-scale biological maps - examples:
+- [ACSN map collection](https://acsn.curie.fr/ACSN2/downloads.html)
+- [RECON Human Metabolic network](https://github.com/sbgn/cd2sbgnml/blob/master/samples/RECON.zip) (last update: 29/01/2019)
+
 ## Contributions and issues
 
-If you have any suggestions or want to report a bug, don't hesitate to create an [issue](https://github.com/royludo/cd2sbgnml/issues).
+If you have any suggestions or want to report a bug, don't hesitate to create an [issue](https://github.com/sbgn/cd2sbgnml/issues).
 Pull requests and all forms of contribution will be warmly welcomed.
 
 ## Useful links
