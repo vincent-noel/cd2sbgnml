@@ -13,7 +13,7 @@ Compatible formats:
  - Sbml Level 2 Version 4, CellDesigner modelVersion 4.0 (output of CellDesigner 4.4)
  - SBGN-ML 0.2 (PD)
 
-To download the full app directly, go to the [release page](https://github.com/royludo/cd2sbgnml/releases).
+To download the full app directly, go to the [release page](https://github.com/sbgn/cd2sbgnml/releases).
 
 More information can be found in the [Wiki](https://github.com/sbgn/cd2sbgnml/wiki).
 
