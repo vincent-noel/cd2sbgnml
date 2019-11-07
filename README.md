@@ -17,7 +17,7 @@ To download the full app directly, go to the [release page](https://github.com/s
 
 More information can be found in the [Wiki](https://github.com/sbgn/cd2sbgnml/wiki).
 
-Javadoc is available [here](https://github.com/sbgn/cd2sbgnml/blob/master/docs/index.html).
+Javadoc is available [here](https://royludo.github.io/cd2sbgnml/).
 
 All known issues and limitations of the translator are listed in the [issues](https://github.com/sbgn/cd2sbgnml/issues)
 and on this [wiki page](https://github.com/sbgn/cd2sbgnml/wiki/Limitations).
